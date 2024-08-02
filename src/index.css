@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+  .contain-pad{
+    @apply px-[320px]
+  }
+}
