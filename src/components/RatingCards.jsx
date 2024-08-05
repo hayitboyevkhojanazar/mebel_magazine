@@ -1,5 +1,6 @@
 import React from 'react'
 import { s1, s2, s3, s4, s5, s6, s7, s8 } from '../assets/images/images'
+import { Icon } from '@iconify/react'
 
 
 const cardsInfo = [
@@ -15,9 +16,25 @@ const cardsInfo = [
 
 const RatingCards = () => {
   return (
-    <div>
-      <div>
-        <p></p>
+    <div className='contain-pad' >
+      <h1 className='font-normal text-3xl text-bleck'>Высокий рейтинг</h1>
+      <div className='flex flex-wrap gap-8'>
+        {cardsInfo.map((item) => (
+          <div className='flex flex-col gap-5 bg-grey_light p-8 rounded-xl '>
+            <div className='text-secondary' >
+              <Icon icon="bi:star-fill" />
+              <p>{item.rate}</p>
+            </div>
+            <div>
+              <img src={item.img} alt="" />
+            </div>
+            <div>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
+            </div>
+            <button className='buy'>Купить</button>
+          </div>
+        ))}
       </div>
     </div>
   )

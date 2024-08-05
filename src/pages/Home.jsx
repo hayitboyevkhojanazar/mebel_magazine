@@ -2,6 +2,7 @@ import React from 'react'
 import ImageLoop from '../components/ImgLoop'
 import Header from '../components/Header'
 import SpecialCards from '../components/SpecialCards'
+import RatingCards from '../components/RatingCards'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         <ImageLoop/>
       </div>
       <SpecialCards />
+      <RatingCards/>
     </div>
   )
 }

@@ -72,7 +72,7 @@ const SpecialCards = () => {
                     <NumberFormatter number={item.price} /> руб
                   </del>
                 </p>
-                <button className='w-fit text-primary border-2 font border-primary px-9 py-3 rounded-[10px]'>Купить</button>
+                <button className='buy'>Купить</button>
               </div>
               {item.drawing && (
                 <div className='flex items-end'>
