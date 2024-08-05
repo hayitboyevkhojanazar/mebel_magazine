@@ -18,7 +18,7 @@ const RatingCards = () => {
   return (
     <div className='contain-pad' >
       <h1 className='font-normal text-3xl text-bleck'>Высокий рейтинг</h1>
-      <div className='flex flex-wrap gap-8'>
+      <div className='grid grid-cols-4 gap-8'>
         {cardsInfo.map((item) => (
           <div className='flex flex-col gap-5 bg-grey_light p-8 rounded-xl '>
             <div className='text-secondary' >

@@ -10,6 +10,6 @@
 
 @layer components{
   .buy{
-    @apply w-fit border-2 border-primary rounded-[10px] px-9 py-3 text-primary hover:bg-primary hover:text-white 
+    @apply w-fit border-2 border-primary rounded-[10px] px-9 py-3 text-primary hover:bg-primary duration-300 hover:text-white 
   }
 }

@@ -59,26 +59,28 @@ const SpecialCards = () => {
             <div className='flex justify-center pt-10'>
               <img src={item.img} alt="" />
             </div>
-            <div className='flex gap-20'>
-              <div className='flex flex-col gap-5'>
-                <div>
-                  <p className='font-normal text-2xl text-bleck max-w-52'>{item.name}</p>
+            <div className='flex flex-col gap-10'>
+              <div className='flex gap-20'>
+                <div className='flex flex-col gap-5'>
+                  <div>
+                    <p className='font-normal text-2xl text-bleck max-w-52'>{item.name}</p>
+                  </div>
+                  <p className='flex items-center justify-between'>
+                    <span className='flex gap-1 font-normal text-lg text-secondary'>
+                      <NumberFormatter number={item.price - item.discount} /> руб
+                    </span>
+                    <del className='flex gap-1 font-normal text-grey'>
+                      <NumberFormatter number={item.price} /> руб
+                    </del>
+                  </p>
                 </div>
-                <p className='flex items-center justify-between'>
-                  <span className='flex gap-1 font-normal text-lg text-secondary'>
-                    <NumberFormatter number={item.price - item.discount} /> руб
-                  </span>
-                  <del className='flex gap-1 font-normal text-grey'>
-                    <NumberFormatter number={item.price} /> руб
-                  </del>
-                </p>
-                <button className='buy'>Купить</button>
+                {item.drawing && (
+                  <div className='flex items-end'>
+                    <img src={item.drawing} alt="" />
+                  </div>
+                )}
               </div>
-              {item.drawing && (
-                <div className='flex items-end'>
-                  <img src={item.drawing} alt="" />
-                </div>
-              )}
+              <button className='buy'>Купить</button>
             </div>
           </div>
         ))}
